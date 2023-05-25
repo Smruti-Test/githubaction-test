@@ -19,3 +19,4 @@ Test commit 03
 
 Sm1
 Sm2
+Sm3
