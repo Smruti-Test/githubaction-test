@@ -22,3 +22,4 @@ Sm2
 Sm3
 Sm4
 sm5
+sm6
