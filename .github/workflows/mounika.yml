@@ -20,7 +20,7 @@ jobs:
           change-request: '{
                       "setCloseCode": "true",
                       "attributes": {
-                          "requested_by": {"name": "devops.system"},
+                          "requested_by": {"user_name": "devops.system"},
                           "assignment_group": "a715cd759f2002002920bde8132e7018",
                           "priority": "2",
                           "comments": "This is a sample pipeline script to be added in your change step Test Mounika 2",
