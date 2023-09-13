@@ -31,6 +31,7 @@ jobs:
               "work_notes": "Update this to work_notes",
               "start_date": "2023-09-07 11:59:59",
               "end_date": "2023-09-09 11:59:59"
+              }
             }
           interval: '100'
           timeout: '3600'
