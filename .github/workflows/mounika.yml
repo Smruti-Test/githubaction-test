@@ -19,7 +19,7 @@ jobs:
           job-name: 'ServiceNow Change Approval'
           change-request: |
             '{"attributes": 
-              {"short_description": "Automated Software Deployment"} #comment
+              {"short_description": "Automated Software Deployment"} #comment2
               }'
           interval: '100'
           timeout: '3600'
