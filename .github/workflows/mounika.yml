@@ -20,10 +20,10 @@ jobs:
           change-request: '{
                       "setCloseCode": "true",
                       "attributes": {
-                          "requested_by": {"user_name": "devops.system"},
+                          "requested_by": {"name": "DevOps System"},
                           "assignment_group": {"name": "Change Management"},
                           "priority": "2",
-                          "comments": "This is a sample pipeline script to be added in your change step Test Mounika 12 2",
+                          "comments": "This is a sample pipeline script to be added in your change step Test 123Mounika 12 2",
                           "work_notes": "Update this to work_note",
                           "start_date": "2023-09-07 11:59:59",
                           "end_date": "2023-09-09 11:59:59"
