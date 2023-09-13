@@ -17,6 +17,11 @@ jobs:
           tool-id: ${{ secrets.SN_ORCH_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
           job-name: 'ServiceNow Change Approval'
-          change-request: '{"attributes": {"short_description": "Automated Software Deployment"}}'#comment
+          change-request: |
+            '{"attributes": 
+              {"short_description": "Automated Software Deployment",
+              "description": "Test Automated Software Deployment"
+              }
+            }'#comment
           interval: '100'
           timeout: '3600'
