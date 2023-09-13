@@ -21,6 +21,7 @@ jobs:
             {
               "attributes":
               {
+              \\comment
                 "short_description":"Automated Software Deployment",
                 "description":"Automated Software Deployment.",
                 "assignment_group":"a715cd759f2002002920bde8132e7018",
