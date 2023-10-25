@@ -3,6 +3,13 @@ on:
   workflow_dispatch:
 
 jobs:
+  build:
+    name: ServiceNow Build Step
+    runs-on: ubuntu-latest
+    steps:     
+      - name: ServiceNow Build Step
+        run: echo Build step completed!
+        
   changeApproval:
     name: ServiceNow Change Approval
     runs-on: ubuntu-latest
