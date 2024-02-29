@@ -8,6 +8,13 @@ on:
   workflow_dispatch:
 
 jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:     
+      - name: Build Test
+        run: echo "Build Test"
+        
   changeApproval:
     name: ServiceNow Change Approval
     runs-on: ubuntu-latest
