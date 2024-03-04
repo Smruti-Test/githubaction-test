@@ -34,4 +34,5 @@ jobs:
           change-request: '{"attributes": {"short_description": "Automated Software Deployment"}}'
           interval: '100'
           timeout: '3600'
+          abortOnChangeCreationFailure: false
           abortOnChangeStepTimeout: true
