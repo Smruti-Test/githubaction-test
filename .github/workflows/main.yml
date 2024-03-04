@@ -21,7 +21,7 @@ jobs:
     needs: build
     steps:     
       - name: ServiceNow Change Approval
-        uses: ServiceNow/servicenow-devops-change@dev
+        uses: ServiceNow/servicenow-devops-change@smrutiTestGitHubChangeAction
         id: create
         with:
           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
@@ -33,6 +33,5 @@ jobs:
           change-request: '{"attributes": {"short_description": "Automated Software Deployment"}}'
           interval: '100'
           timeout: '3600'
-          changeCreationTimeOut: '3800'
           abortOnChangeCreationFailure: true
           abortOnChangeStepTimeout: true
