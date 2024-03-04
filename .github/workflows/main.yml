@@ -24,10 +24,10 @@ jobs:
         uses: ServiceNow/servicenow-devops-change@smrutiTestGitHubChangeAction
         id: create
         with:
-          # devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
-          # devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWD }}
+          devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
+          devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWD }}
           instance-url: ${{ secrets.SN_INSTANCE_NAME }}
-          devops-integration-token: ${{ secrets.SN_DEVOPS_INTEGRATION_TOKEN }}
+          # devops-integration-token: ${{ secrets.SN_DEVOPS_INTEGRATION_TOKEN }}
           tool-id: ${{ secrets.SN_ORCH_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
           job-name: 'ServiceNow Change Approval'
@@ -35,7 +35,7 @@ jobs:
             { "setCloseCode": "true", "attributes": { "short_description":
             "Automated Software Deployment", "description": "Automated Software
             Deployment.", "assignment_group":
-            "a715cd759f2002002920bde8132e70189", "implementation_plan": "Software
+            "a715cd759f2002002920bde8132e7018", "implementation_plan": "Software
             update is tested and results can be found in Test Summaries Tab.",
             "backout_plan": "When software fails in production, the previous
             software release will be re-deployed.", "test_plan": "Testing if the
