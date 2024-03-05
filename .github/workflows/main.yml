@@ -21,7 +21,7 @@ jobs:
     needs: build
     steps:     
       - name: ServiceNow Change Approval
-        uses: ServiceNow/servicenow-devops-change@smrutiTestGitHubChangeAction
+        uses: ServiceNow/servicenow-devops-change@DEF0433982
         id: create
         with:
           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
@@ -42,5 +42,5 @@ jobs:
             software was successfully deployed" } }
           interval: '100'
           timeout: '3600'
-          abortOnChangeCreationFailure: false
+          abortOnChangeCreationFailure: true
           abortOnChangeStepTimeout: true
