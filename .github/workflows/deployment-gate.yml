@@ -20,36 +20,61 @@ jobs:
     - name: Run Build scripts
       run: echo 'Build step in progress...'
 
- 
   change:
-    name: 'Change'
+    name: Change Request
     needs: build
     runs-on: ubuntu-latest
     steps:     
-    - name: ServiceNow DevOps Change Automation
-    # You may pin to the exact commit or the version.            
-      uses: ServiceNow/servicenow-devops-change@v2.0.0
-      with:
-          # ServiceNow Instance URL
-          instance-url: ${{ secrets.SN_INSTANCE_NAME }}
-          # Devops Integration Token
+      - name: ServiceNow DevOps Change Attributes
+        uses: ServiceNow/servicenow-devops-change@3.1.0
+        with:
+          # devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
+          # devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
           devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
-          # Orchestration Tool Id
+          instance-url: ${{ secrets.SN_INSTANCE_NAME }}
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
-          # Display Name of the Job
-          job-name: 'Change'
-          # Github Context
           context-github: ${{ toJSON(github) }}
-          change-request: '{"setCloseCode":"true","attributes":{"short_description":"Automated Software Deployment","description":"Automated Software Deployment.","assignment_group":"a715cd759f2002002920bde8132e7018","implementation_plan":"Software update is tested and results can be found in Test Summaries Tab; When the change is approved the implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"When software fails in production, the previous software release will be re-deployed.","test_plan":"Testing if the software was successfully deployed"}}'
-          
-  # uncomment below lines of code to create change request using deployment gates, indent code if necessary
+          job-name: 'Change Request'
+          change-request: '{"setCloseCode":"true","attributes":{"short_description":"Automated Software Deployment","chg_model":"adffaa9e4370211072b7f6be5bb8f2ed","description":"Automated Software Deployment.","assignment_group":"a715cd759f2002002920bde8132e7018","implementation_plan":"Software update is tested and results can be found in Test Summaries Tab; When the change is approved the implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"When software fails in production, the previous software release will be re-deployed.","test_plan":"Testing if the software was successfully deployed"}}'
           deployment-gate: '{"environment":"deployment_gate","jobName":"Deploy"}'
-
+        
   deploy:
     name: 'Deploy'
     needs: change
     runs-on: ubuntu-latest
     environment: deployment_gate
     steps:
-    - name: Run deployment scripts
-      run: echo 'Deployment step in progress...'
+      - name: Run deployment scripts
+        run: echo Completed Deployment. 
+  # change:
+  #   name: 'Change'
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:     
+  #   - name: ServiceNow DevOps Change Automation
+  #   # You may pin to the exact commit or the version.            
+  #     uses: ServiceNow/servicenow-devops-change@v2.0.0
+  #     with:
+  #         # ServiceNow Instance URL
+  #         instance-url: ${{ secrets.SN_INSTANCE_NAME }}
+  #         # Devops Integration Token
+  #         devops-integration-token: ${{ secrets.SN_DEVOPS_TOKEN }}
+  #         # Orchestration Tool Id
+  #         tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
+  #         # Display Name of the Job
+  #         job-name: 'Change'
+  #         # Github Context
+  #         context-github: ${{ toJSON(github) }}
+  #         change-request: '{"setCloseCode":"true","attributes":{"short_description":"Automated Software Deployment","description":"Automated Software Deployment.","assignment_group":"a715cd759f2002002920bde8132e7018","implementation_plan":"Software update is tested and results can be found in Test Summaries Tab; When the change is approved the implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"When software fails in production, the previous software release will be re-deployed.","test_plan":"Testing if the software was successfully deployed"}}'
+          
+  # # uncomment below lines of code to create change request using deployment gates, indent code if necessary
+  #         deployment-gate: '{"environment":"deployment_gate","jobName":"Deploy"}'
+
+  # deploy:
+  #   name: 'Deploy'
+  #   needs: change
+  #   runs-on: ubuntu-latest
+  #   environment: deployment_gate
+  #   steps:
+  #   - name: Run deployment scripts
+  #     run: echo 'Deployment step in progress...'
