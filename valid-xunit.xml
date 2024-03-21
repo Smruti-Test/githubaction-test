@@ -1,13 +1,13 @@
-<assemblies timestamp="09/28/2023 12:21:41">
-  <assembly name="/Users/kiran.lakhani/csharpProject/MyCalculatorApp.Tests/bin/Debug/net7.0/MyCalculatorApp.Tests.dll" run-date="2023-09-28" run-time="12:21:41" total="2" passed="2" failed="0" skipped="0" time="1.301" errors="0">
+<test-run id="2" duration="0.016573" testcasecount="2" total="2" passed="2" failed="0" inconclusive="0" skipped="0" result="Passed" start-time="2023-09-29T 10:56:49Z" end-time="2023-09-29T 10:56:51Z">
+  <test-suite type="Assembly" name="MyNUnitTestProject.Tests.dll" fullname="/Users/kiran.lakhani/dotNetProj/MyNUnitTestProject.Tests/bin/Debug/net7.0/MyNUnitTestProject.Tests.dll" total="2" passed="2" failed="0" inconclusive="0" skipped="0" result="Passed" start-time="2023-09-29T 10:56:51Z" end-time="2023-09-29T 10:56:51Z" duration="0.016573">
+    <test-suite type="TestSuite" name="MyNUnitTestProject" fullname="MyNUnitTestProject" total="2" passed="2" failed="0" inconclusive="0" skipped="0" result="Passed" start-time="2023-09-29T 10:56:51Z" end-time="2023-09-29T 10:56:51Z" duration="0.016573">
+      <test-suite type="TestSuite" name="Tests" fullname="MyNUnitTestProject.Tests" total="2" passed="2" failed="0" inconclusive="0" skipped="0" result="Passed" start-time="2023-09-29T 10:56:51Z" end-time="2023-09-29T 10:56:51Z" duration="0.016573">
+        <test-suite type="TestFixture" name="MyTests" fullname="MyNUnitTestProject.Tests.MyTests" classname="MyNUnitTestProject.Tests.MyTests" total="2" passed="2" failed="0" inconclusive="0" skipped="0" result="Passed" start-time="2023-09-29T 10:56:51Z" end-time="2023-09-29T 10:56:51Z" duration="0.016573">
+          <test-case name="TestAddition" fullname="MyNUnitTestProject.Tests.MyTests.TestAddition" methodname="TestAddition" classname="MyTests" result="Passed" start-time="2023-09-29T 10:56:51Z" end-time="2023-09-29T 10:56:51Z" duration="0.014352" asserts="0" seed="2059221906" />
+          <test-case name="TestSubtraction" fullname="MyNUnitTestProject.Tests.MyTests.TestSubtraction" methodname="TestSubtraction" classname="MyTests" result="Passed" start-time="2023-09-29T 10:56:51Z" end-time="2023-09-29T 10:56:51Z" duration="0.002221" asserts="0" seed="1156721298" />
+        </test-suite>
+      </test-suite>
+    </test-suite>
     <errors />
-    <collection total="2" passed="2" failed="0" skipped="0" name="Test collection for UnknownNamespace.UnknownType" time="0.021">
-      <test name="CalculatorTests.Add_ShouldReturnCorrectSum" type="UnknownNamespace.UnknownType" method="CalculatorTests.Add_ShouldReturnCorrectSum" time="0.0202585" result="Pass">
-        <traits />
-      </test>
-      <test name="CalculatorTests.Subtract_ShouldReturnCorrectDifference" type="UnknownNamespace.UnknownType" method="CalculatorTests.Subtract_ShouldReturnCorrectDifference" time="0.0010284" result="Pass">
-        <traits />
-      </test>
-    </collection>
-  </assembly>
-</assemblies>
+  </test-suite>
+</test-run>
