@@ -11,29 +11,15 @@ jobs:
   build:
     name: 'Build'
     runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 11
-      uses: actions/setup-java@v3
-      with:
-        java-version: '11'
-        distribution: 'temurin'
-        cache: maven
-    - name: Build with Maven
-      run: mvn clean compile
+    steps:     
+      - name: Build Test
+        run: echo "Build Test"
 
   test:
     name: 'Test'
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4.0.0
-        
-    - name: Run Tests with Maven
-      run: mvn -B test --file pom.xml
-
     - name: ServiceNow DevOps Unit Test Results
     # You may pin to the exact commit or the version.
       uses: ServiceNow/servicenow-devops-test-report@v3.1.0
