@@ -35,7 +35,7 @@ jobs:
           # Github Context
           context-github: ${{ toJSON(github) }}
           # JUnit xml report file name with path
-          xml-report-filename: valid-xunit.xml
+          xml-report-filename: githubaction-test/blob/main/valid-xunit.xml
 
   registerArtifact:
     name: 'Register Artifact'
