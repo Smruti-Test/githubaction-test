@@ -20,7 +20,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: ServiceNow DevOps Unit Test Results
+    - name: ServiceNow DevOps Unit Test Results SM
       run: echo "Test"
     # You may pin to the exact commit or the version.
       # uses: ServiceNow/servicenow-devops-test-report@v3.1.0
