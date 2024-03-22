@@ -20,7 +20,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: ServiceNow DevOps Unit Test Results SM
+    - name: ServiceNow DevOps Unit Test Results
       # run: echo "Test"
     # You may pin to the exact commit or the version.
       uses: ServiceNow/servicenow-devops-test-report@v3.1.0
@@ -36,7 +36,7 @@ jobs:
           # Github Context
           context-github: ${{ toJSON(github) }}
           # JUnit xml report file name with path
-          xml-report-filename: target/surefire-reports/TEST-com.sn.TestRepo.AppTest.xml
+          xml-report-filename: valid-xunit.xml
 
   registerArtifact:
     name: 'Register Artifact'
