@@ -1,6 +1,9 @@
 name: Push Build to Artifactory
 
-on: workflow_dispatch 
+# on: workflow_dispatch 
+on:
+  push:
+    branches: [ main ]
 
 jobs:
  build:
@@ -33,7 +36,7 @@ jobs:
           # Publish build info
           jf rt bp
 
-          jf rt u "BulkCommitDir/randfile_1_2022_05_14_08_54_1652498687.txt" "tf-trial/workspaces/jfrog-ws1/"
+          jf rt u "README.md" "tf-trial/workspaces/jfrog-ws1/"
           # Collect environment variables for the build
           jf rt bce
           # Publish build info
