@@ -43,8 +43,9 @@ jobs:
           # jf rt bp
    - name: Download Artifact
      run: |
-          jf rt dl tf-trial/workspaces/jfrog-ws1/README.md ./ 
-          jf rt dl tf-trial/workspaces/jfrog-ws1/valid-xunit.xml ./
+          # jf rt dl tf-trial/workspaces/jfrog-ws1/README.md ./ 
+          # jf rt dl tf-trial/workspaces/jfrog-ws1/valid-xunit.xml ./
+          jf rt dl tf-trial/workspaces/jfrog-ws1/test/upload1 ./ 
           jf rt bp
 
 
