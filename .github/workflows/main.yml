@@ -40,8 +40,6 @@ jobs:
         uses: ServiceNow/servicenow-devops-change@dev
         id: create
         with:
-          # devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
-          # devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWD }}
           instance-url: ${{ secrets.SN_INSTANCE_NAME }}
           devops-integration-token: ${{ secrets.SN_DEVOPS_INTEGRATION_TOKEN }}
           tool-id: ${{ secrets.SN_ORCH_TOOL_ID }}
